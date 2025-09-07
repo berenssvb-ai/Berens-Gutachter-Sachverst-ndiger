@@ -1,4 +1,4 @@
-/* Allgemeines Layout */
+/* Allgemein */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -7,9 +7,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;       /* angenehme Breite */
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 /* Header / Navigation */
@@ -20,8 +20,6 @@ body {
   background-color: #f5f3ef;
   padding: 12px 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  position: relative;
-  z-index: 1000;
 }
 
 .navbar .logo img {
@@ -66,6 +64,18 @@ body {
   transition: all 0.4s;
 }
 
+.hamburger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav-links {
@@ -96,32 +106,21 @@ body {
   }
 }
 
-/* Hamburger Animation */
-.hamburger.toggle span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.toggle span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.toggle span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
 /* Hero Section */
 .hero {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
   background-color: #e8f5e9;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
 .hero-content {
   max-width: 600px;
-  margin-right: 20px;
 }
 
 .hero-content h1 {
@@ -151,56 +150,59 @@ body {
 .hero-image img {
   max-width: 400px;
   width: 100%;
-  border-radius: 10px;
-  margin-top: 20px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 0 auto;
 }
 
 /* Sections */
 section h2 {
+  font-size: 2rem;
   color: #2e7d32;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+section p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Grid für Leistungen / Referenzen */
 .service-grid,
-.process-grid,
-.legal-grid,
 .references-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
 .service-item,
-.process-item,
-.legal-item,
 .reference-item {
   background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  flex: 1 1 250px;
-  max-width: 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
 }
 
 .service-item img,
-.process-item img,
-.legal-item img,
-.reference-item img,
-.about-image {
+.reference-item img {
   max-width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto 15px;
-  border-radius: 8px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Footer */
 footer {
   background-color: #f5f3ef;
   text-align: center;
-  padding: 15px 0;
+  padding: 20px 0;
   margin-top: 40px;
   color: #5d4037;
 }
