@@ -8,7 +8,17 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="js/script.js" defer></script>
 <style>
-/* Zusätzliche Styling für Bilder */
+/* Zusätzliche Styles für Über uns Seite */
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Bilder */
 .about-image,
 .process-item img,
 .legal-item img {
@@ -16,33 +26,81 @@
   height: auto;
   display: block;
   margin: 0 auto 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+/* Prozess- & Rechts-Grid */
+.process-grid,
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
 .process-item,
 .legal-item {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: #fff;
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Überschriften */
+h1, h2 {
+  color: #2e7d32;
+  margin-bottom: 25px;
+}
+
+h3 {
+  color: #5d4037;
+  margin-bottom: 10px;
+}
+
+/* Text */
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Hero- & About-Bilder */
+.about-intro, .about-why {
+  margin-bottom: 50px;
+}
+
+/* Footer */
+footer {
+  background-color: #f5f3ef;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  color: #5d4037;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
 }
 </style>
 </head>
 <body>
 <header>
 <nav class="navbar">
-<div class="logo">Gutachter Philipp Berens</div>
-<ul class="nav-links">
-<li><a href="index.html">Start</a></li>
-<li><a href="ueber.html">Über uns</a></li>
-<li><a href="leistungen.html">Leistungen</a></li>
-<li><a href="referenzen.html">Referenzen</a></li>
-<li><a href="kontakt.html">Kontakt</a></li>
-<li><a href="impressum.html">Impressum</a></li>
-</ul>
-<div class="hamburger"><span></span><span></span><span></span></div>
+  <div class="logo"><img src="images/logo-placeholder.png" alt="Gutachter Philipp Berens Logo"></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Start</a></li>
+    <li><a href="ueber.html">Über uns</a></li>
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="referenzen.html">Referenzen</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="impressum.html">Impressum</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
 </nav>
 </header>
 
@@ -120,7 +178,7 @@
 </main>
 
 <footer>
-<p>&copy; 2025 Gutachter Philipp Berens| <a href="impressum.html">Impressum & Datenschutz</a></p>
+<p>&copy; 2025 Gutachter Philipp Berens | <a href="impressum.html">Impressum & Datenschutz</a></p>
 </footer>
 </body>
 </html>
