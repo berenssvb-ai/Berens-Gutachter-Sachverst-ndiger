@@ -3,6 +3,5 @@ const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
-  // Animation der Hamburger-Icon-Linien
   hamburger.classList.toggle('toggle');
 });
