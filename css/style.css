@@ -22,9 +22,11 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-.navbar .logo img {
-  height: 50px;
+  .navbar .logo img {
+  height: 100px;   /* Logo wird doppelt so hoch */
+  width: auto;     /* bleibt im richtigen Seitenverhältnis */
 }
+
 
 .nav-links {
   display: flex;
