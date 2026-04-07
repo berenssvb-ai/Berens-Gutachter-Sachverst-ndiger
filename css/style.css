@@ -1,232 +1,203 @@
 /* =========================
-   GRUNDLAYOUT
+   BASIS / RESET
 ========================= */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  background: #f6f7f9;
   color: #222;
-  background: #fff;
+  line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+/* =========================
+   LAYOUT CONTAINER
+========================= */
 
 .container {
-  width: 90%;
-  max-width: 1100px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
+
 
 /* =========================
-   TYPOGRAFIE
+   MODERNE HELLE NAVIGATION
 ========================= */
 
-h1, h2, h3 {
-  color: #111;
-  margin-bottom: 15px;
-}
-
-h1 {
-  font-size: 2.2rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin-top: 40px;
-}
-
-p {
-  margin-bottom: 15px;
-  color: #444;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 5%;
-  background: #0f172a;
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo img {
-  height: 50px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
 }
 
+.logo img {
+  height: 45px;
+}
+
+/* Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 18px;
+  align-items: center;
 }
 
 .nav-links a {
-  color: #fff;
+  color: #1f2937;
   text-decoration: none;
-  font-size: 0.95rem;
-  transition: 0.3s;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: 0.2s ease;
 }
 
+/* Hover */
 .nav-links a:hover {
-  color: #38bdf8;
+  background: #f3f4f6;
 }
 
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background: #fff;
-  margin: 4px 0;
-  border-radius: 2px;
+/* Aktive Seite */
+.nav-links a.active {
+  background: #2563eb;
+  color: white;
 }
 
 /* =========================
-   HERO
+   MOBILE NAV
+========================= */
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* =========================
+   HERO BEREICH
 ========================= */
 
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 5%;
-  background: #f5f7fb;
-  gap: 40px;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
 }
 
-.hero-content {
-  flex: 1;
-}
-
-.hero-image {
-  flex: 1;
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-/* kleine Hero Variante */
-.hero-small {
-  padding: 60px 5%;
-  background: #f5f7fb;
-  text-align: center;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn-primary {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #0f172a;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background: #1e293b;
+  font-size: 18px;
+  opacity: 0.9;
 }
 
 /* =========================
    SEKTIONEN
 ========================= */
 
-.section {
+section {
   padding: 60px 0;
 }
 
-.content-block {
-  padding: 30px 0;
+h1, h2, h3 {
+  margin-bottom: 20px;
 }
 
-.content-block.grey {
-  background: #f5f7fb;
-  padding: 40px 0;
+p {
+  margin-bottom: 15px;
 }
 
 /* =========================
-   GRIDS
+   BUTTONS
 ========================= */
 
-.grid-3 {
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   BILDER / CARDS (WICHTIG)
+========================= */
+
+.image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 20px;
+  gap: 30px;
+  margin-top: 30px;
 }
+
+.image-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.image-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-card .caption {
+  padding: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   LEISTUNGEN / BOXEN
+========================= */
 
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  align-items: center;
+  gap: 25px;
 }
 
-/* =========================
-   CARDS
-========================= */
-
-.card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: 0.3s;
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  margin: 15px 0 10px;
-}
-
-.card p {
-  padding: 0 15px 20px;
-}
-
-/* =========================
-   CTA
-========================= */
-
-.cta {
-  background: #0f172a;
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-  margin-top: 40px;
-}
-
-.cta h2,
-.cta p {
-  color: #fff;
+.box {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 /* =========================
@@ -235,61 +206,28 @@ p {
 
 footer {
   background: #0f172a;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-footer a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-
-/* =========================
-   TWO COLUMNS (Spielplatzseite)
-========================= */
-
-.two-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: center;
-}
-
-/* =========================
-   CHECKLIST
-========================= */
-
-.checklist {
-  list-style: none;
-}
-
-.checklist li {
-  padding-left: 25px;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.checklist li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #0f172a;
+  padding: 30px 0;
+  margin-top: 60px;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 900px) {
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
+@media (max-width: 992px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid-3 {
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-grid {
     grid-template-columns: 1fr;
   }
 
@@ -297,61 +235,16 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  .two-columns {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    display: none;
+  .navbar {
     flex-direction: column;
-    background: #0f172a;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    padding: 20px;
+    gap: 10px;
   }
 
-  .nav-links.active {
-    display: flex;
+  .hero {
+    padding: 50px 0;
   }
 
-  .hamburger {
-    display: flex;
+  .hero h1 {
+    font-size: 28px;
   }
-}
-/* ===== Bildsystem (einheitlich für alle Seiten) ===== */
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 30px;
-}
-
-.image-card {
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.image-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.image-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.image-card .caption {
-  padding: 12px 14px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #333;
 }
