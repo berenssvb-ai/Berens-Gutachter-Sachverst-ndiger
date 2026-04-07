@@ -1,36 +1,31 @@
 /* =========================
-   RESET & BASIS
+   GRUNDEINSTELLUNG
 ========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-html, body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #2b2b2b;
+body {
+  background: #f6f7f5;
+  color: #1c1c1c;
   line-height: 1.6;
-  background: #ffffff;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* =========================
-   LAYOUT
-========================= */
+/* Container */
 .container {
-  max-width: 1100px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  padding: 20px;
 }
 
 /* =========================
    TYPOGRAFIE
 ========================= */
+
 h1, h2, h3 {
   color: #1f4d2e;
   margin-bottom: 15px;
@@ -38,58 +33,79 @@ h1, h2, h3 {
 
 p {
   margin-bottom: 15px;
-  color: #444;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  display: inline-block;
+  background: #1f4d2e;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #163823;
+  transform: translateY(-2px);
 }
 
 /* =========================
    NAVBAR
 ========================= */
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: #ffffff;
-  border-bottom: 1px solid #eaeaea;
+  background: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo img {
-  height: 50px;
-  width: auto;
-  max-width: 180px;
-  object-fit: contain;
-  display: block;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .logo img {
-    height: 38px;
-    max-width: 140px;
-  }
-}
-
-.nav-links {
+.navbar .container {
   display: flex;
-  gap: 20px;
-  list-style: none;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-links a {
-  padding: 8px 12px;
-  border-radius: 6px;
+/* LOGO */
+.logo img {
+  height: 70px;
+  width: auto;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #1c1c1c;
+  font-weight: 600;
   transition: 0.3s;
 }
 
-.nav-links a:hover {
-  background: #eaf5ee;
+.nav-links li a:hover,
+.nav-links li a.active {
   color: #1f4d2e;
 }
 
-/* Mobile Menu */
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -100,212 +116,121 @@ p {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #1f4d2e;
+  background: #1c1c1c;
 }
 
 /* =========================
-   BUTTONS
+   HERO / SECTIONS
 ========================= */
-.btn {
-  display: inline-block;
-  background: #1f4d2e;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  transition: 0.3s;
+
+section {
+  padding: 60px 0;
 }
 
-.btn:hover {
-  background: #163723;
-}
-
-/* =========================
-   CARDS
-========================= */
-.card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-/* =========================
-   GRIDS
-========================= */
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 25px;
 }
 
 /* =========================
-   BILDER (WICHTIG FÜR DEIN PROBLEM)
+   CARDS
 ========================= */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+
+.card {
+  background: white;
+  padding: 20px;
   border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
 }
 
-/* gleichmäßige Bilder in Karten */
-.card img,
-.reference-item img {
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 12px;
-}
-
-/* =========================
-   REFERENZEN
-========================= */
-.references-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.reference-item {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-/* =========================
-   FORMULAR
-========================= */
-input, textarea {
-  width: 100%;
-  padding: 12px;
+  border-radius: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
 }
 
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #1f4d2e;
+/* Referenzen etwas moderner */
+.reference-card img {
+  height: 220px;
+}
+
+/* =========================
+   REFERENZEN FILTER BUTTONS
+========================= */
+
+button.btn {
+  margin: 5px;
 }
 
 /* =========================
    FOOTER
 ========================= */
+
 footer {
-  background: #f5f3ef;
+  background: #1f4d2e;
+  color: white;
   text-align: center;
-  padding: 25px;
+  padding: 25px 0;
   margin-top: 50px;
-  color: #5a4a3f;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
+
+@media (max-width: 900px) {
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
 
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #fff;
     position: absolute;
-    top: 70px;
+    top: 80px;
     right: 20px;
-    width: 200px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    padding: 10px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .hamburger {
     display: flex;
   }
 
-  .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
   }
 
-  .card img,
-  .reference-item img {
-    height: 180px;
+  .logo img {
+    height: 55px;
   }
-}
-
-/* =========================
-   MOBILE MENU UPGRADE
-========================= */
-
-.nav-links {
-  transition: all 0.3s ease;
-}
-
-.nav-links.active {
-  display: flex;
-}
-
-/* Mobile Menü */
-@media (max-width: 768px) {
-
-  .navbar {
-    position: relative;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 220px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    padding: 10px;
-    z-index: 999;
-  }
-
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 12px;
-    border-radius: 8px;
-  }
-
-  .nav-links a:hover {
-    background: #f1f5f9;
-  }
-
-  /* Hamburger sichtbar */
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* Hamburger Animation */
-.hamburger span {
-  transition: 0.3s;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
 }
