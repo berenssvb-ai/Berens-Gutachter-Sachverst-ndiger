@@ -57,7 +57,19 @@ p {
 }
 
 .logo img {
-  height: 45px;
+  height: 50px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo img {
+    height: 38px;
+    max-width: 140px;
+  }
 }
 
 .nav-links {
