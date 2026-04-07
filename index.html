@@ -1,146 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gutachter Philipp Berens</title>
-<meta name="description" content="Gutachten für Versicherung, Schadensbewertung, Spielplatzprüfung und Wertermittlung.">
+  <title>Gutachter Philipp Berens – Schadensgutachten & Spielplatzprüfung</title>
 
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js" defer></script>
+  <meta name="description" content="Gutachter für Schadensbewertung und Spielplatzprüfung nach DIN EN 1176. Tätig für Kommunen, Versicherungen und Privatkunden im Raum Wiesmoor.">
 
-<style>
-/* ===== BASIS ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* ===== NAV ===== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #2e7d32;
-}
-
-/* Hamburger (nur sichtbar mobil) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background: #2e7d32;
-  margin: 4px 0;
-}
-
-/* ===== HERO ===== */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 20px;
-  gap: 30px;
-}
-
-.hero-content {
-  flex: 1;
-}
-
-.hero img {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* ===== SERVICES ===== */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 40px 20px;
-}
-
-.service-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.service-item {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: 0.3s;
-  text-align: center;
-}
-
-.service-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.service-item img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-}
-
-/* ===== MOBILE OPTIMIERUNG ===== */
-@media (max-width: 768px) {
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero img {
-    max-width: 100%;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: white;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
-
-  .navbar.active .nav-links {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-</style>
-
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -149,77 +18,87 @@ footer {
   <nav class="navbar">
     <div class="logo">
       <a href="index.html">
-        <img src="images/Logo.svg" alt="Logo" style="height:50px;">
+        <img src="images/Logo.svg" alt="Gutachter Philipp Berens">
       </a>
     </div>
 
     <ul class="nav-links">
       <li><a href="index.html">Start</a></li>
-      <li><a href="ueber.html">Über uns</a></li>
+      <li><a href="ueber.html">Über mich</a></li>
       <li><a href="leistungen.html">Leistungen</a></li>
-      <li><a href="Spielplatzpruefung.html">Spielplatzprüfung</a></li>
+      <li><a href="spielplatzpruefung.html">Spielplatzprüfung</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="impressum.html">Impressum</a></li>
     </ul>
 
-    <div class="hamburger">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Gutachten & Schadensbewertung</h1>
-    <p>Schnell, zuverlässig und fachlich fundiert.</p>
-    <a href="kontakt.html">Jetzt Kontakt</a>
+    <h1>Gutachter für Schadensbewertung & Spielplatzprüfung</h1>
+
+    <p>
+      Fachlich fundierte und rechtssichere Gutachten für Kommunen,
+      Versicherungen und Privatkunden – mit klarer Dokumentation
+      und praxisnahen Lösungen.
+    </p>
+
+    <p class="hero-highlight">
+      ✔ Spielplatzprüfung nach DIN EN 1176<br>
+      ✔ Schadensgutachten für Außenanlagen<br>
+      ✔ Objektive Wertermittlung
+    </p>
+
+    <a href="kontakt.html" class="btn-primary">Jetzt Gutachten anfragen</a>
   </div>
 
-  <img src="images/Logo.jpg" alt="Gutachter Arbeit">
+  <div class="hero-image">
+    <img src="images/Logo.jpg" alt="Gutachter bei der Arbeit">
+  </div>
 </section>
 
 <!-- SERVICES -->
-<section class="service-grid">
+<section class="services">
+  <h2>Leistungen</h2>
 
-  <a href="leistungen.html#schadensgutachten" class="service-link">
+  <div class="service-grid">
+
     <div class="service-item">
-      <img src="images/Messung.jpeg">
-      <h3>Schadensgutachten</h3>
-      <p>Versicherungen & Privatkunden</p>
+      <img src="images/schaden-placeholder.jpeg" alt="Schadensgutachten">
+      <h3><a href="leistungen.html#schadensgutachten">Schadensgutachten</a></h3>
+      <p>Bewertung von Schäden an Außenanlagen, Bauwerken und Grünflächen.</p>
     </div>
-  </a>
 
-  <a href="Spielplatzpruefung.html" class="service-link">
     <div class="service-item">
-      <img src="images/Spielplatz2.jpeg">
-      <h3>Spielplatzprüfung</h3>
-      <p>DIN EN 1176 geprüft</p>
+      <img src="images/Spielplatz2.jpeg" alt="Spielplatzprüfung">
+      <h3><a href="spielplatzpruefung.html">Spielplatzprüfung</a></h3>
+      <p>Prüfungen nach DIN EN 1176 inkl. Dokumentation und Wartungsempfehlung.</p>
     </div>
-  </a>
 
-  <a href="leistungen.html#wertermittlung" class="service-link">
     <div class="service-item">
-      <img src="images/wertgutachten-placeholder.JPEG">
-      <h3>Wertermittlung</h3>
-      <p>Bäume & Außenanlagen</p>
+      <img src="images/wertgutachten-placeholder.JPEG" alt="Wertermittlung">
+      <h3><a href="leistungen.html#wertermittlung">Wertermittlung</a></h3>
+      <p>Bewertung von Bäumen, Gehölzen und Außenanlagen.</p>
     </div>
-  </a>
 
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Sie benötigen ein Gutachten?</h2>
+  <p>Ich unterstütze Sie schnell und zuverlässig – von der Einschätzung bis zur Dokumentation.</p>
+
+  <a href="kontakt.html" class="btn-primary">Jetzt unverbindlich anfragen</a>
 </section>
 
 <footer>
-  <p>&copy; 2025 Gutachter Philipp Berens</p>
+  <p>&copy; 2025 Gutachter Philipp Berens | <a href="impressum.html">Impressum & Datenschutz</a></p>
 </footer>
-
-<script>
-/* Mobile Menü Funktion */
-const navbar = document.querySelector(".navbar");
-const hamburger = document.querySelector(".hamburger");
-
-hamburger.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-});
-</script>
 
 </body>
 </html>
