@@ -1,31 +1,225 @@
-<section class="services">
-  <h2>Unsere Leistungen</h2>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="service-grid">
+<title>Gutachter Philipp Berens</title>
+<meta name="description" content="Gutachten für Versicherung, Schadensbewertung, Spielplatzprüfung und Wertermittlung.">
 
-    <a href="leistungen.html#schadensgutachten" class="service-link">
-      <div class="service-item">
-        <img src="images/schaden-placeholder.jpeg" alt="Schadensgutachten">
-        <h3>Schadensgutachten</h3>
-        <p>Gutachten für Versicherungen, Kommunen, Firmen und Privatkunden.</p>
-      </div>
-    </a>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
 
-    <a href="Spielplatzpruefung.html" class="service-link">
-      <div class="service-item">
-        <img src="images/Spielplatz2.jpeg" alt="Spielplatzprüfung">
-        <h3>Spielplatzprüfung</h3>
-        <p>Sicherheitsprüfungen nach DIN EN 1176 & TÜV-konform.</p>
-      </div>
-    </a>
+<style>
+/* ===== BASIS ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-    <a href="leistungen.html#wertermittlung" class="service-link">
-      <div class="service-item">
-        <img src="images/wertgutachten-placeholder.JPEG" alt="Wertermittlung">
-        <h3>Wertermittlung</h3>
-        <p>Präzise Bewertung von Außenanlagen, Bäumen und Gehölzen.</p>
-      </div>
-    </a>
+/* ===== NAV ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
 
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2e7d32;
+}
+
+/* Hamburger (nur sichtbar mobil) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #2e7d32;
+  margin: 4px 0;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  gap: 30px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ===== SERVICES ===== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+.service-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== MOBILE OPTIMIERUNG ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Logo.svg" alt="Logo" style="height:50px;">
+      </a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="ueber.html">Über uns</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="Spielplatzpruefung.html">Spielplatzprüfung</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Gutachten & Schadensbewertung</h1>
+    <p>Schnell, zuverlässig und fachlich fundiert.</p>
+    <a href="kontakt.html">Jetzt Kontakt</a>
   </div>
+
+  <img src="images/Logo.jpg" alt="Gutachter Arbeit">
 </section>
+
+<!-- SERVICES -->
+<section class="service-grid">
+
+  <a href="leistungen.html#schadensgutachten" class="service-link">
+    <div class="service-item">
+      <img src="images/Messung.jpeg">
+      <h3>Schadensgutachten</h3>
+      <p>Versicherungen & Privatkunden</p>
+    </div>
+  </a>
+
+  <a href="Spielplatzpruefung.html" class="service-link">
+    <div class="service-item">
+      <img src="images/Spielplatz2.jpeg">
+      <h3>Spielplatzprüfung</h3>
+      <p>DIN EN 1176 geprüft</p>
+    </div>
+  </a>
+
+  <a href="leistungen.html#wertermittlung" class="service-link">
+    <div class="service-item">
+      <img src="images/wertgutachten-placeholder.JPEG">
+      <h3>Wertermittlung</h3>
+      <p>Bäume & Außenanlagen</p>
+    </div>
+  </a>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Gutachter Philipp Berens</p>
+</footer>
+
+<script>
+/* Mobile Menü Funktion */
+const navbar = document.querySelector(".navbar");
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
