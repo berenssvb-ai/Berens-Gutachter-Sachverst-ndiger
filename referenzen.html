@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +7,7 @@
 
 <title>Referenzen – Gutachter Philipp Berens</title>
 
-<meta name="description" content="Ausgewählte Referenzprojekte im Bereich Schadensgutachten, Spielplatzprüfung und Wertermittlung. Nachvollziehbar dokumentiert und praxisnah umgesetzt.">
+<meta name="description" content="Ausgewählte Referenzen aus Schadensgutachten, Spielplatzprüfungen und Baumbewertungen.">
 
 <link rel="stylesheet" href="css/style.css">
 <script src="js/script.js" defer></script>
@@ -14,99 +15,138 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <nav class="navbar container">
+  <nav class="navbar">
 
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/Logo.svg" alt="Gutachter Philipp Berens Logo" height="45">
-      </a>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/Logo.svg" alt="Gutachter Philipp Berens Logo">
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="spielplatzpruefung.html">Spielplatzprüfung</a></li>
+        <li><a href="referenzen.html" class="active">Referenzen</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Start</a></li>
-      <li><a href="ueber.html">Über mich</a></li>
-      <li><a href="leistungen.html">Leistungen</a></li>
-      <li><a href="spielplatzpruefung.html">Spielplatzprüfung</a></li>
-      <li><a class="active" href="referenzen.html">Referenzen</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-
-    <div class="hamburger"><span></span><span></span><span></span></div>
 
   </nav>
 </header>
 
-<main class="container">
+<!-- HERO -->
+<section style="padding:80px 20px; background:#f8f8f6; text-align:center;">
+  <div class="container">
 
-  <!-- HERO -->
-  <section style="padding: 60px 0;">
-    <h1>Referenzen</h1>
-    <p>
-      Ausgewählte Projekte aus den Bereichen Schadensbewertung, Spielplatzprüfung und Wertermittlung.
-      Alle Leistungen wurden fachlich geprüft, dokumentiert und nachvollziehbar aufbereitet.
-    </p>
-  </section>
+    <h1>Referenzen & Projekte</h1>
 
-  <!-- REFERENZ 1 -->
-  <section class="card" style="margin-bottom: 30px;">
-    <h2>Schadensgutachten – Zaunanlage nach Fahrzeuganprall</h2>
-    <p>
-      Nach einem Verkehrsunfall wurde eine beschädigte Zaunanlage aufgenommen, dokumentiert und bewertet.
-      Das Gutachten diente als Grundlage für die Regulierung durch die Versicherung.
+    <p style="max-width:800px; margin:auto;">
+      Ausgewählte Arbeiten aus den Bereichen Schadensgutachten, Spielplatzprüfung und Baumbewertung.
+      Jede Dokumentation basiert auf fachlicher Bewertung und nachvollziehbarer Analyse.
     </p>
-    <p>
-      Ergebnis: vollständige Schadensanerkennung und objektive Wertermittlung zur weiteren Abwicklung.
-    </p>
-  </section>
 
-  <!-- REFERENZ 2 -->
-  <section class="card" style="margin-bottom: 30px;">
-    <h2>Spielplatzprüfung – kommunale Anlage</h2>
-    <p>
-      Durchführung einer sicherheitstechnischen Hauptinspektion nach DIN EN 1176 für eine öffentliche Spielanlage.
-    </p>
-    <p>
-      Ergebnis: dokumentierte Mängelaufnahme und konkrete Maßnahmenempfehlungen zur Wiederherstellung der Verkehrssicherheit.
-    </p>
-  </section>
+  </div>
+</section>
 
-  <!-- REFERENZ 3 -->
-  <section class="card" style="margin-bottom: 30px;">
-    <h2>Wertermittlung – Baum- und Grünanlagenbewertung</h2>
-    <p>
-      Bewertung von Vegetations- und Außenanlagen nach Schadensereignis zur Vorlage bei einer Versicherung.
-    </p>
-    <p>
-      Ergebnis: nachvollziehbare Wertermittlung als Grundlage für die Regulierung des Schadensfalls.
-    </p>
-  </section>
+<!-- FILTER (optisch, später JS möglich) -->
+<section class="container" style="padding:30px 20px; text-align:center;">
 
-  <!-- REFERENZ 4 -->
-  <section class="card" style="margin-bottom: 60px;">
-    <h2>Baubegleitung – kommunales Außenanlagenprojekt</h2>
-    <p>
-      Fachliche Begleitung eines kommunalen Projekts zur Gestaltung und Sanierung von Außenflächen.
-    </p>
-    <p>
-      Ergebnis: dokumentierte Bauüberwachung und fachliche Unterstützung bei der Ausführung.
-    </p>
-  </section>
+  <button class="btn">Alle</button>
+  <button class="btn" style="background:#e5e5e5; color:#000;">Schaden</button>
+  <button class="btn" style="background:#e5e5e5; color:#000;">Spielplatz</button>
+  <button class="btn" style="background:#e5e5e5; color:#000;">Bäume</button>
 
-  <!-- CTA -->
-  <section class="card" style="text-align:center;">
-    <h2>Benötigen Sie eine fachliche Bewertung?</h2>
-    <p>
-      Ich unterstütze Sie kurzfristig mit einer objektiven und nachvollziehbaren Gutachtenerstellung.
-    </p>
-    <a href="kontakt.html" class="btn">Kontakt aufnehmen</a>
-  </section>
+</section>
 
-</main>
+<!-- GRID -->
+<section class="container" style="padding:40px 20px;">
 
+  <div class="grid-3">
+
+    <!-- ITEM 1 -->
+    <div class="card reference-card">
+      <img src="images/referenzen/schaden1.jpg" alt="Schadensgutachten Fahrzeug">
+
+      <h3>Schadensgutachten Fahrzeug</h3>
+      <p>Bewertung eines Unfallschadens inkl. Dokumentation für Versicherung.</p>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="card reference-card">
+      <img src="images/referenzen/spielplatz1.jpg" alt="Spielplatzprüfung">
+
+      <h3>Spielplatzprüfung</h3>
+      <p>Sicherheitsprüfung nach DIN EN 1176 inkl. Mängelbericht.</p>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="card reference-card">
+      <img src="images/referenzen/baum1.jpg" alt="Baumgutachten">
+
+      <h3>Baumgutachten</h3>
+      <p>Verkehrssicherheitsbeurteilung einer alten Straßenbaumreihe.</p>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="card reference-card">
+      <img src="images/referenzen/schaden2.jpg" alt="Gebäudeschaden">
+
+      <h3>Gebäudeschaden</h3>
+      <p>Feuchteschadenbewertung mit Ursachenanalyse.</p>
+    </div>
+
+    <!-- ITEM 5 -->
+    <div class="card reference-card">
+      <img src="images/referenzen/spielplatz2.jpg" alt="Spielplatz Kontrolle">
+
+      <h3>Spielplatz Kontrolle</h3>
+      <p>Regelmäßige Sicherheitskontrolle kommunaler Anlagen.</p>
+    </div>
+
+    <!-- ITEM 6 -->
+    <div class="card reference-card">
+      <img src="images/referenzen/baum2.jpg" alt="Baumpflege Bewertung">
+
+      <h3>Baumbewertung</h3>
+      <p>Beurteilung von Standsicherheit und Kronenzustand.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section style="background:#1f4d2e; color:white; padding:70px 20px; text-align:center;">
+
+  <div class="container">
+
+    <h2>Sie benötigen ein Gutachten?</h2>
+    <p>Ich erstelle Ihnen eine schnelle und fachlich fundierte Bewertung.</p>
+
+    <a href="kontakt.html" class="btn" style="background:#fff; color:#1f4d2e;">
+      Anfrage stellen
+    </a>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="container">
-    <p>&copy; 2025 Gutachter Philipp Berens | <a href="impressum.html">Impressum</a></p>
+    <p>&copy; 2026 Gutachter Philipp Berens</p>
   </div>
 </footer>
 
