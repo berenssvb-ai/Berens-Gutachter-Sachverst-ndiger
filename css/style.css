@@ -1,281 +1,229 @@
 /* =========================
-   MODERN DESIGN SYSTEM (2026)
-   Light / Premium / SEO-friendly
+   RESET & BASIS
 ========================= */
-
-:root {
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-
-  --text: #1f2937;
-  --muted: #6b7280;
-
-  --bg: #f6f8fc;
-  --card: #ffffff;
-  --border: #e5e7eb;
-
-  --shadow: 0 10px 30px rgba(0,0,0,0.08);
-  --shadow-soft: 0 6px 18px rgba(0,0,0,0.06);
-
-  --radius: 14px;
-}
-
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2b2b2b;
   line-height: 1.6;
-  font-size: 16px;
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* =========================
-   TYPOGRAPHY
+   LAYOUT
 ========================= */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
+/* =========================
+   TYPOGRAFIE
+========================= */
 h1, h2, h3 {
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: clamp(28px, 4vw, 44px);
-}
-
-h2 {
-  font-size: clamp(22px, 3vw, 32px);
+  color: #1f4d2e;
+  margin-bottom: 15px;
 }
 
 p {
-  color: var(--muted);
+  margin-bottom: 15px;
+  color: #444;
 }
 
 /* =========================
-   CONTAINER
+   NAVBAR
 ========================= */
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-/* =========================
-   HEADER / NAVIGATION
-========================= */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 20px;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 45px;
 }
 
 .nav-links {
   display: flex;
+  gap: 20px;
   list-style: none;
-  gap: 12px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  padding: 10px 14px;
-  border-radius: 10px;
-  transition: all 0.25s ease;
-  position: relative;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
-  background: #eef2ff;
-  transform: translateY(-1px);
+  background: #eaf5ee;
+  color: #1f4d2e;
 }
 
-.nav-links a.active {
-  background: var(--primary);
-  color: white;
-  box-shadow: var(--shadow-soft);
+/* Mobile Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero {
-  padding: 90px 0;
-  background: radial-gradient(circle at top, #ffffff, #eef2ff);
-  text-align: left;
-}
-
-.hero h1 {
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 700px;
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1f4d2e;
 }
 
 /* =========================
    BUTTONS
 ========================= */
-
 .btn {
   display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 12px 18px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.25s ease;
-  box-shadow: var(--shadow-soft);
+  background: #1f4d2e;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
-}
-
-/* =========================
-   GRID SYSTEM
-========================= */
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  background: #163723;
 }
 
 /* =========================
    CARDS
 ========================= */
-
 .card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow-soft);
-  transition: all 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 /* =========================
-   IMAGE CARDS (SEO + MODERN)
+   GRIDS
 ========================= */
-
-.image-card {
-  background: white;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-  transition: all 0.25s ease;
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.image-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.image-card img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+/* =========================
+   BILDER (WICHTIG FÜR DEIN PROBLEM)
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
   display: block;
+  border-radius: 12px;
 }
 
-.image-card .caption {
-  padding: 12px 14px;
-  font-weight: 600;
-  color: var(--text);
+/* gleichmäßige Bilder in Karten */
+.card img,
+.reference-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =========================
+   REFERENZEN
+========================= */
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.reference-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* =========================
+   FORMULAR
+========================= */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #1f4d2e;
 }
 
 /* =========================
    FOOTER
 ========================= */
-
 footer {
+  background: #f5f3ef;
   text-align: center;
-  padding: 50px 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* =========================
-   ANIMATION
-========================= */
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero, .card, .image-card {
-  animation: fadeUp 0.6s ease both;
+  padding: 25px;
+  margin-top: 50px;
+  color: #5a4a3f;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
-
-@media (max-width: 900px) {
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding: 60px 0;
-  }
+@media (max-width: 768px) {
 
   .nav-links {
-    flex-wrap: wrap;
-    gap: 8px;
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .card img,
+  .reference-item img {
+    height: 180px;
   }
 }
