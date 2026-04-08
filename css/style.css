@@ -75,17 +75,30 @@ p {
 }
 
 /* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  max-width: 150px;
+}
+
 .logo img {
-  height: 70px;
-  width: auto;
-  display: block;
-  transition: 0.3s ease;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.logo img:hover {
-  transform: scale(1.05);
-}
+/* MOBILE FIX */
+@media (max-width: 768px) {
 
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    max-width: 110px; /* ← entscheidend */
+  }
+
+}
 /* NAV LINKS */
 .nav-links {
   list-style: none;
