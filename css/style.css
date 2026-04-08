@@ -55,49 +55,43 @@ p {
   transform: translateY(-2px);
 }
 
-/* =========================
-   NAVBAR
-========================= */
-
+/* NAVBAR */
 .navbar {
-  background: white;
-  padding: 15px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
 }
 
-/* LOGO */
+/* LOGO CONTAINER */
 .logo {
   display: flex;
   align-items: center;
-  max-width: 150px;
+  flex-shrink: 0; /* verhindert Verziehen */
 }
 
+/* LOGO BILD */
 .logo img {
-  width: 100%;
-  height: auto;
+  height: 40px;      /* Desktop Größe */
+  width: auto;
   object-fit: contain;
+  display: block;
 }
 
-/* MOBILE FIX */
+/* TABLET */
 @media (max-width: 768px) {
-
-  .navbar {
-    padding: 10px 15px;
+  .logo img {
+    height: 34px;
   }
+}
 
-  .logo {
-    max-width: 110px; /* ← entscheidend */
+/* MOBILE */
+@media (max-width: 480px) {
+  .logo img {
+    height: 30px;
   }
-
 }
 /* NAV LINKS */
 .nav-links {
