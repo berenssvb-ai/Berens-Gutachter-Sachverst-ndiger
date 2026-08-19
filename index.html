@@ -1,174 +1,584 @@
+```html
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gutachter Philipp Berens – Schadensgutachten & Spielplatzprüfung in Wiesmoor</title>
+  <title>Gutachter Philipp Berens | Schadensgutachten & Spielplatzprüfung</title>
 
-<meta name="description" content="Unabhängiger Gutachter für Schadensgutachten, Spielplatzprüfungen und Baumgutachten in Wiesmoor und Umgebung. Fachlich fundiert, rechtssicher und zuverlässig.">
+  <meta name="description"
+    content="Gutachter Philipp Berens aus Wiesmoor: Schadensgutachten, Spielplatzprüfungen nach DIN EN 1176 und Baumgutachten für Kommunen, Unternehmen, Versicherungen und private Auftraggeber in Ostfriesland.">
 
-<meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Philipp Berens">
 
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js" defer></script>
+  <meta property="og:title"
+    content="Gutachter Philipp Berens – Schadensgutachten & Spielplatzprüfung">
+
+  <meta property="og:description"
+    content="Fachlich fundierte Schadensgutachten, Spielplatzprüfungen nach DIN EN 1176 und Baumgutachten in Wiesmoor und Ostfriesland.">
+
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://www.deine-domain.de/">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <nav class="navbar container">
+  <!-- HEADER -->
+  <header class="site-header">
 
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/Logo.jpg" alt="Gutachter Philipp Berens Logo">
-      </a>
+    <nav class="navbar container" aria-label="Hauptnavigation">
+
+      <div class="logo">
+        <a href="index.html" aria-label="Gutachter Philipp Berens – Startseite">
+          <img
+            src="images/Logo.jpg"
+            alt="Gutachter Philipp Berens"
+            width="220"
+            height="80"
+          >
+        </a>
+      </div>
+
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="main-navigation">
+
+        <li>
+          <a href="index.html" class="active" aria-current="page">
+            Startseite
+          </a>
+        </li>
+
+        <li>
+          <a href="leistungen.html">
+            Leistungen
+          </a>
+        </li>
+
+        <li>
+          <a href="spielplatzpruefung.html">
+            Spielplatzprüfung
+          </a>
+        </li>
+
+        <li>
+          <a href="referenzen.html">
+            Referenzen
+          </a>
+        </li>
+
+        <li>
+          <a href="kontakt.html">
+            Kontakt
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Unabhängige Sachverständigenleistungen
+          </span>
+
+          <h1>
+            Gutachten für Schäden, Spielplätze und Außenanlagen
+          </h1>
+
+          <p class="hero-text">
+            Fachlich fundierte Schadensgutachten, Spielplatzprüfungen
+            und Baumgutachten für Kommunen, Unternehmen, Versicherungen
+            und private Auftraggeber.
+          </p>
+
+          <p class="hero-subtext">
+            Unabhängig, nachvollziehbar dokumentiert und auf Grundlage
+            einer fachlich sorgfältigen Vor-Ort-Bewertung.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="kontakt.html" class="btn">
+              Gutachten anfragen
+            </a>
+
+            <a href="leistungen.html" class="btn btn-outline">
+              Leistungen ansehen
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+          <img
+            src="images/referenzen/spielplatz1.jpg"
+            alt="Begutachtung und Prüfung einer Spielplatzanlage"
+            width="900"
+            height="650"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VERTRAUEN -->
+    <section class="trust-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Ihre Vorteile
+          </span>
+
+          <h2>
+            Fachlich fundierte Bewertungen mit klarer Dokumentation
+          </h2>
+
+        </div>
+
+
+        <div class="grid-3">
+
+          <article class="card trust-card">
+
+            <h3>
+              Unabhängige Bewertung
+            </h3>
+
+            <p>
+              Sachverhalte werden neutral und nachvollziehbar bewertet –
+              unabhängig von ausführenden Unternehmen oder anderen
+              Beteiligten.
+            </p>
+
+          </article>
+
+
+          <article class="card trust-card">
+
+            <h3>
+              Vor-Ort-Begutachtung
+            </h3>
+
+            <p>
+              Die fachliche Bewertung erfolgt auf Grundlage der
+              tatsächlichen Gegebenheiten vor Ort und einer
+              nachvollziehbaren Dokumentation.
+            </p>
+
+          </article>
+
+
+          <article class="card trust-card">
+
+            <h3>
+              Verständlich dokumentiert
+            </h3>
+
+            <p>
+              Ergebnisse werden strukturiert, verständlich und mit
+              aussagekräftiger Dokumentation dargestellt.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REGION -->
+    <section class="region-section">
+
+      <div class="container region-content">
+
+        <span class="eyebrow">
+          Ostfriesland & Umgebung
+        </span>
+
+        <h2>
+          Ihr Gutachter in Wiesmoor und Ostfriesland
+        </h2>
+
+        <p>
+          Von Wiesmoor aus bin ich für Auftraggeber in Ostfriesland
+          und der näheren Umgebung tätig. Dazu gehören unter anderem
+          Aurich, Leer, Wittmund und weitere Orte im regionalen Umfeld.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- LEISTUNGEN -->
+    <section class="services-section">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="eyebrow">
+            Leistungen
+          </span>
+
+          <h2>
+            Sachverständigenleistungen im Garten- und Landschaftsbau
+          </h2>
+
+          <p>
+            Von der Schadensaufnahme bis zur technischen Bewertung:
+            individuelle Gutachten und Prüfleistungen für unterschiedliche
+            Aufgabenstellungen.
+          </p>
+
+        </div>
+
+
+        <div class="grid-3">
+
+          <article class="card service-card">
+
+            <h3>
+              Schadensgutachten
+            </h3>
+
+            <p>
+              Fachliche Untersuchung, Bewertung und Dokumentation
+              von Schäden an Außenanlagen, Grundstücken und
+              landschaftsgärtnerischen Anlagen.
+            </p>
+
+            <a href="leistungen.html">
+              Mehr erfahren →
+            </a>
+
+          </article>
+
+
+          <article class="card service-card featured">
+
+            <span class="card-label">
+              Schwerpunkt
+            </span>
+
+            <h3>
+              Spielplatzprüfung
+            </h3>
+
+            <p>
+              Fachkundige Prüfungen von Spielplatzanlagen und
+              Spielgeräten nach den einschlägigen Anforderungen,
+              insbesondere der DIN EN 1176.
+            </p>
+
+            <a href="spielplatzpruefung.html">
+              Mehr über Spielplatzprüfungen →
+            </a>
+
+          </article>
+
+
+          <article class="card service-card">
+
+            <h3>
+              Baumgutachten
+            </h3>
+
+            <p>
+              Fachliche Beurteilung von Bäumen hinsichtlich Zustand,
+              Schäden, Auffälligkeiten und Verkehrssicherheit im
+              Rahmen des jeweiligen Untersuchungsauftrags.
+            </p>
+
+            <a href="leistungen.html">
+              Mehr erfahren →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REFERENZEN -->
+    <section class="references-section">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="eyebrow">
+            Praxisbeispiele
+          </span>
+
+          <h2>
+            Ausgewählte Referenzen
+          </h2>
+
+          <p>
+            Ein Einblick in bereits bearbeitete Aufgabenstellungen
+            aus den Bereichen Schadensbegutachtung, Spielplatzprüfung
+            und Baumbeurteilung.
+          </p>
+
+        </div>
+
+
+        <div class="grid-3">
+
+
+          <article class="reference-card">
+
+            <img
+              src="images/referenzen/schaden1.jpg"
+              alt="Dokumentation eines Schadens an einer Außenanlage"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+
+            <div class="reference-content">
+
+              <span>
+                Schadensgutachten
+              </span>
+
+              <h3>
+                Schadensaufnahme und Bewertung
+              </h3>
+
+            </div>
+
+          </article>
+
+
+          <article class="reference-card">
+
+            <img
+              src="images/referenzen/spielplatz1.jpeg"
+              alt="Spielplatzanlage im Rahmen einer Prüfung"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+
+            <div class="reference-content">
+
+              <span>
+                Spielplatzprüfung
+              </span>
+
+              <h3>
+                Prüfung einer Spielplatzanlage
+              </h3>
+
+            </div>
+
+          </article>
+
+
+          <article class="reference-card">
+
+            <img
+              src="images/referenzen/baum1.jpeg"
+              alt="Baum im Rahmen einer fachlichen Begutachtung"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+
+            <div class="reference-content">
+
+              <span>
+                Baumgutachten
+              </span>
+
+              <h3>
+                Fachliche Baumbewertung
+              </h3>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="section-button">
+
+          <a href="referenzen.html" class="btn">
+            Alle Referenzen ansehen
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta-section">
+
+      <div class="container cta-content">
+
+        <span class="eyebrow">
+          Sie benötigen eine fachliche Einschätzung?
+        </span>
+
+        <h2>
+          Lassen Sie Ihr Anliegen fachlich bewerten.
+        </h2>
+
+        <p>
+          Schildern Sie mir kurz den Sachverhalt und die gewünschte
+          Leistung. Anschließend kann gemeinsam geklärt werden,
+          welche Form der Begutachtung sinnvoll ist.
+        </p>
+
+        <a href="kontakt.html" class="btn btn-light">
+          Anfrage stellen
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <h3>
+          Gutachter Philipp Berens
+        </h3>
+
+        <p>
+          Schadensgutachten · Spielplatzprüfung · Baumgutachten
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Leistungen
+        </h3>
+
+        <ul>
+          <li>
+            <a href="leistungen.html">
+              Schadensgutachten
+            </a>
+          </li>
+
+          <li>
+            <a href="spielplatzpruefung.html">
+              Spielplatzprüfung
+            </a>
+          </li>
+
+          <li>
+            <a href="leistungen.html">
+              Baumgutachten
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Kontakt
+        </h3>
+
+        <a href="kontakt.html">
+          Kontakt aufnehmen
+        </a>
+
+      </div>
+
     </div>
 
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Start</a></li>
-      <li><a href="leistungen.html">Leistungen</a></li>
-      <li><a href="spielplatzpruefung.html">Spielplatzprüfung</a></li>
-      <li><a href="referenzen.html">Referenzen</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
 
-    <div class="hamburger">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="footer-bottom">
 
-  </nav>
-</header>
+      <div class="container">
 
-<!-- HERO -->
-<section style="padding:90px 0; background:#f6f7f5;">
+        <p>
+          &copy; 2026 Gutachter Philipp Berens
+        </p>
 
-  <div class="container grid-2">
+        <div class="footer-links">
 
-    <div>
+          <a href="impressum.html">
+            Impressum
+          </a>
 
-      <h1>Unabhängige Gutachten für Schäden, Spielplätze und Außenanlagen</h1>
+          <a href="datenschutz.html">
+            Datenschutz
+          </a>
 
-      <p>
-        Fachlich fundierte Schadensgutachten, Spielplatzprüfungen und Baumgutachten
-        für Kommunen, Versicherungen und private Auftraggeber.
-      </p>
+        </div>
 
-      <p>
-        Transparent, rechtssicher und nachvollziehbar dokumentiert.
-      </p>
-
-      <a href="kontakt.html" class="btn">Jetzt Kontakt aufnehmen</a>
+      </div>
 
     </div>
 
-    <div>
-      <img src="images/referenzen/spielplatz1.jpg" alt="Spielplatzprüfung vor Ort">
-    </div>
+  </footer>
 
-  </div>
-
-</section>
-
-<!-- REGION -->
-<section class="container" style="padding:60px 20px; text-align:center;">
-
-  <h2>Ihr Gutachter in Wiesmoor und Umgebung</h2>
-
-  <p>
-    Tätig in Wiesmoor, Aurich, Leer und ganz Ostfriesland.
-    Schnelle Vor-Ort-Termine und rechtssichere Bewertungen.
-  </p>
-
-</section>
-
-<!-- LEISTUNGEN -->
-<section class="container">
-
-  <h2 style="text-align:center;">Leistungen</h2>
-
-  <div class="grid-3">
-
-    <div class="card">
-      <h3>Schadensgutachten</h3>
-      <p>Bewertung und Dokumentation von Schäden für Versicherungen und Gerichte.</p>
-    </div>
-
-    <div class="card">
-      <h3>Spielplatzprüfung</h3>
-      <p>Prüfung nach DIN EN 1176 für sichere Spielanlagen.</p>
-    </div>
-
-    <div class="card">
-      <h3>Baumgutachten</h3>
-      <p>Verkehrssicherheitsbewertung von Bäumen und Grünflächen.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- REFERENZEN -->
-<section class="container" style="text-align:center; padding-top:50px;">
-
-  <h2>Ausgewählte Referenzen</h2>
-
-  <div class="grid-3">
-
-    <div class="card">
-      <img src="images/referenzen/schaden1.jpg" alt="Schadensgutachten Zaun Wiesmoor">
-      <h3>Schadensgutachten</h3>
-    </div>
-
-    <div class="card">
-      <img src="images/referenzen/spielplatz1.jpeg" alt="Spielplatzprüfung DIN EN 1176">
-      <h3>Spielplatzprüfung</h3>
-    </div>
-
-    <div class="card">
-      <img src="images/referenzen/baum1.jpeg" alt="Baumgutachten Verkehrssicherheit">
-      <h3>Baumgutachten</h3>
-    </div>
-
-  </div>
-
-  <div style="margin-top:25px;">
-    <a href="referenzen.html" class="btn">Alle Referenzen</a>
-  </div>
-
-</section>
-
-<!-- CTA -->
-<section style="background:#1f4d2e; color:white; padding:70px 20px; text-align:center; margin-top:60px;">
-
-  <div class="container">
-
-    <h2>Benötigen Sie ein Gutachten?</h2>
-
-    <p>Ich berate Sie kurzfristig und zuverlässig.</p>
-
-    <a href="kontakt.html" class="btn" style="background:white; color:#1f4d2e;">
-      Anfrage stellen
-    </a>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-
-  <div class="container">
-
-    <p>Gutachter für Schadensgutachten, Spielplatzprüfung und Baumgutachten in Wiesmoor.</p>
-
-    <p>&copy; 2026 Gutachter Philipp Berens</p>
-
-  </div>
-
-</footer>
 
 </body>
 </html>
+```
