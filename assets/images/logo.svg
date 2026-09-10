@@ -1,0 +1,29 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gutachterbüro Berens">
+  <defs>
+    <clipPath id="innerCircleClip">
+      <circle cx="100" cy="100" r="76"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="100" cy="100" r="96" fill="#F4F0E6"/>
+
+  <!-- äußerer Ring -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#97722F" stroke-width="2.5"/>
+  <!-- innerer Ring -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#24361D" stroke-width="1" opacity="0.55"/>
+
+  <!-- Konturlinien (Landschaft), innerhalb des inneren Kreises -->
+  <g clip-path="url(#innerCircleClip)" opacity="0.55">
+    <path d="M10,132 C45,118 75,146 110,130 C140,116 165,138 195,124" fill="none" stroke="#24361D" stroke-width="1.6"/>
+    <path d="M4,146 C42,132 78,158 112,142 C144,128 168,150 198,138" fill="none" stroke="#97722F" stroke-width="1.6"/>
+  </g>
+
+  <!-- Vermessungsmarke oberhalb des Monogramms -->
+  <path d="M100,44 L108,60 L92,60 Z" fill="#97722F"/>
+  <line x1="100" y1="60" x2="100" y2="70" stroke="#97722F" stroke-width="2"/>
+
+  <!-- Monogramm -->
+  <text x="100" y="122" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="600"
+        fill="#24361D" letter-spacing="1">GB</text>
+</svg>
